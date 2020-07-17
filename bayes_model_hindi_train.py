@@ -156,7 +156,7 @@ def spl_ngram_tokens (parsed_tokens, n, pad_right=False, pad_left=False, noun_ca
                                 "unit": tokens[i+k-1]})
     return context_unit_tokens
 
-with open("../../../HDMI_Hindi/hindi-data/IITB/monolingual.hi", "r", encoding= "utf-8") as f, open("log_file.csv", "w+", encoding="utf-8") as logf:
+with open("monolingual.hi", "r", encoding= "utf-8") as f, open("log_file.csv", "w+", encoding="utf-8") as logf:
     count_sentences = 1
     n_lines = 0
     log_writer = DictWriter(logf, fieldnames=["real_sent", "simp_sent"])

@@ -188,15 +188,15 @@ for cond in predictions:
 for cond in model_class_preds:
     model_class_preds[cond] = normalize(model_class_preds[cond])
 
-for cond in model_class_preds:
-    print(cond)
-    top_preds = [k for k, v in sorted(model_class_preds[cond].items(), 
-                    key=lambda item: item[1], reverse=True)][:5]
-    top_reals = [k for k, v in sorted(human_class_preds.loc[cond].items(), 
-                    key=lambda item: item[1], reverse=True)][:5]
-    for m_vc, h_vc in zip(top_preds, top_reals):
-        print(m_vc, "|", h_vc)
-    print("\n")
+# for cond in model_class_preds:
+#     print(cond)
+#     top_preds = [k for k, v in sorted(model_class_preds[cond].items(), 
+#                     key=lambda item: item[1], reverse=True)][:5]
+#     top_reals = [k for k, v in sorted(human_class_preds.loc[cond].items(), 
+#                     key=lambda item: item[1], reverse=True)][:5]
+#     for m_vc, h_vc in zip(top_preds, top_reals):
+#         print(m_vc, "|", h_vc)
+#     print("\n")
 
 human_distr = []
 model_distr = []
